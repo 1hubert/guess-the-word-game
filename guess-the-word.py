@@ -22,11 +22,13 @@ def prepare_guess():
     print(str(chars) + " letters.")
     return guess
 
+
 def show():
     hidden_guess = ""
     for elem in guess:
         hidden_guess += elem[0] + " "
     return hidden_guess
+
 
 def remaining():
     letters = ""
@@ -36,8 +38,10 @@ def remaining():
 
     return letters
 
+
 guess = prepare_guess()
 moves = 0
+
 
 def input_and_check():
     global is_running
@@ -56,7 +60,7 @@ def input_and_check():
     print("What is your guess?")
     inp = input(">>> ")
 
-    while len(inp) != 1 or inp == False:
+    while len(inp) != 1 or inp is False:
         print()
         print(hidden_guess)
         print()
@@ -64,7 +68,7 @@ def input_and_check():
         print("Your guess must be single character.")
         print("What is your guess?")
         inp = input(">>> ")
-    
+
     if inp != " " and inp.lower() in remaining_letters:
         print(inp + " is a part of the word!")
         for i in guess:
@@ -97,7 +101,6 @@ def input_and_check():
         elif choice == "yes" or choice == "yeah":
             guess = prepare_guess()
             moves = 0
-
 
 
 is_running = True
