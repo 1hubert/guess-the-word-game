@@ -1,5 +1,6 @@
 """ todo:
 zastanowić się czy na pewno potrzebne są zmienne global
+word_bank uzupełniany przez użytkownika
 it took you 6 moves, the best possible is 4
 """
 
